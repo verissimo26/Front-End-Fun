@@ -22,11 +22,46 @@
     border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
     border-radius: 5px;
+    color: rgb(61, 56, 49);    
+
 }
 
-.botoes {
+.button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 20px;
-    grid-gap:10px;
-}  
+    grid-gap:10px;        
+} 
+
+button {
+    padding: 15px;
+    font-size: 25px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #cfcbcb; 
+    border-radius: 5px;   
+    color: rgb(61, 56, 49);    
+}
+
+button.igual {
+    background-color: rgb(81, 85, 85);
+    grid-row: span 2;
+    color: antiquewhite;
+
+}
+
+button.clear {
+    background-color: rgb(81, 85, 85);
+    color: antiquewhite;
+
+}
+
+button:hover {
+    background-color: #b1abab    
+}
+
+.operador {
+    background-color: rgb(127, 129, 129);
+    color: rgb(47, 49, 49);
+
+}

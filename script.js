@@ -1,7 +1,28 @@
-const botoesEL = document.querySelectorAll("botoes");
+const buttonsEl = document.querySelectorAll ("button");
 
-for (let i = 0; i < botoesEL.length; i ++) {
-    botoesEL[i].addEventListener("click", ()=>{
-        console.log(botoesEL[i]);
-    }) 
-};
+const inputFieldEl = document.getElementById ("resutado")
+
+for (let i = 0; i < buttonsEl.length; i++) {
+    buttonsEl[i].addEventListener ("click", () => {
+        const buttuonValue = buttonsEl[i].textContent;
+        if (buttuonValue === "C") {
+            clearResults ()
+        }  else if (buttuonValue === "=") {
+            calculateResults ()
+        } else {
+            appendValue(buttuonValue);
+        }
+    });
+}
+
+function clearResults () {
+    inputFieldEl.value = "";
+}
+
+function calculateResults () {
+    inputFieldEl.value = eval(inputFieldEl.value)
+}
+
+function appendValue (buttuonValue) {
+    inputFieldEl.value += buttuonValue;
+}
